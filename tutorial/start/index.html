@@ -15,7 +15,7 @@ Hello12345678910111213var MyApp = san.defineComponent(&amp;#123;    template: &a
 <meta property="og:description" content="San 是一个 MVVM 的组件框架，通过 San 的视图引擎能够让用户只用操作数据，视图自动更新。
 我们以一些简单的例子，开始了解 San。这些例子可以从这里找到。
 Hello12345678910111213var MyApp = san.defineComponent(&amp;#123;    template: &apos;&amp;lt;p&amp;gt;Hello &amp;#123;&amp;#123;name&amp;#125;&amp;#12">
-<meta property="og:updated_time" content="2016-09-12T13:40:49.000Z">
+<meta property="og:updated_time" content="2016-09-12T14:06:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="开始">
 <meta name="twitter:description" content="San 是一个 MVVM 的组件框架，通过 San 的视图引擎能够让用户只用操作数据，视图自动更新。
@@ -67,9 +67,9 @@ Hello12345678910111213var MyApp = san.defineComponent(&amp;#123;    template: &a
         <dd><a href="/san/doc/api/">API</a></dd>
 
         <dt>示例</dt>
-        <dd><a href="#" target="_blank">一些小示例</a></dd>
-        <dd><a href="#" target="_blank">Todos(AMD)</a></dd>
-        <dd><a href="#" target="_blank">Todos(ES6)</a></dd>
+        <dd><a href="https://github.com/ecomfe/san/tree/master/example/start" target="_blank">一些小示例</a></dd>
+        <dd><a href="https://github.com/ecomfe/san/tree/master/example/todos-amd" target="_blank">Todos (AMD)</a></dd>
+        <dd><a target="_blank">Todos (ES6) - coming soon</a></dd>
     </dl>
 </aside>
 <article id="post-start" class="article article-type-post" itemscope itemprop="blogPost">
@@ -87,7 +87,7 @@ Hello12345678910111213var MyApp = san.defineComponent(&amp;#123;    template: &a
     <div class="article-entry" itemprop="articleBody">
       
         <p>San 是一个 MVVM 的组件框架，通过 San 的视图引擎能够让用户只用操作数据，视图自动更新。</p>
-<p>我们以一些简单的例子，开始了解 San。这些例子可以从<a href="https://github.com/ecomfe/san-core/tree/master/example/start" target="_blank" rel="external">这里</a>找到。</p>
+<p>我们以一些简单的例子，开始了解 San。这些例子可以从<a href="https://github.com/ecomfe/san/tree/master/example/start" target="_blank" rel="external">这里</a>找到。</p>
 <h2 id="Hello"><a href="#Hello" class="headerlink" title="Hello"></a>Hello</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> MyApp = san.defineComponent(&#123;</div><div class="line">    template: <span class="string">'&lt;p&gt;Hello &#123;&#123;name&#125;&#125;!&lt;/p&gt;'</span>,</div><div class="line"></div><div class="line">    initData: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            name: <span class="string">'San'</span></div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">var</span> myApp = <span class="keyword">new</span> MyApp();</div><div class="line">myApp.attach(<span class="built_in">document</span>.body);</div></pre></td></tr></table></figure>
 <p>可以看到，通常情况实用 San 会经过这么几步：</p>
 <ol>
