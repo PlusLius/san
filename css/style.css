@@ -51,7 +51,7 @@ header nav .github {
 .get-start {
     display: inline-block;
     width: 120px;
-    margin: 40px auto;
+    margin: 20px auto 40px;
     line-height: 26px;
     font-size: 1.6rem;
     text-align: center;
@@ -71,7 +71,7 @@ header nav .github {
 
 
 .header-index {
-    padding-top: 40px;
+    padding-top: 20px;
     text-align: center;
 }
 
@@ -225,7 +225,7 @@ section h4 b {
 }
 
 footer {
-    background: #98c5e5;
+    background: #b3a6a6;
     margin: 0;
 }
 
@@ -241,9 +241,16 @@ footer {
     width: 70px;
 }
 
-.efe-products dt a {
+.efe-products a,
+.efe-products a:link,
+.efe-products a:visited
+.efe-products a:active {
     color: #efefef;
     text-decoration: none;
+}
+
+.efe-products a:hover {
+    text-decoration: underline;
 }
 
 .efe-products dt, .efe-products dd {
