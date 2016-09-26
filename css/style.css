@@ -281,10 +281,11 @@ footer {
 }
 
 .recommend {
-    float: left;
+    position: absolute;
+    top: 0;
+    left: 2rem;
     font-size: 1.4rem;
     width: 16rem;
-    margin-right: .9rem;
 }
 
 .recommend dt {
@@ -304,8 +305,9 @@ footer {
 
 main {
     overflow: hidden;
-    width: 90rem;
+    min-width: 90rem;
     margin: 0 auto;
+    position: relative;
 }
 
 .example-main {
