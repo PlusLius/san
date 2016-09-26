@@ -51,7 +51,7 @@ header nav .github {
 .get-start {
     display: inline-block;
     width: 120px;
-    margin: 30px;
+    margin: 40px auto;
     line-height: 26px;
     font-size: 1.6rem;
     text-align: center;
@@ -71,16 +71,21 @@ header nav .github {
 
 
 .header-index {
-    padding-top: 20px;
-    height: 300px;
+    padding-top: 40px;
     text-align: center;
 }
 
 .logo {
     display: block;
-    width: 100px;
-    height: 200px;
     margin: 0 auto;
+}
+
+.logo-s-link {
+    float: left;
+    margin: 17px 20px 0;
+}
+.logo-s {
+    border: 0;
 }
 
 section {
