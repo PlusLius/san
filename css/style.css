@@ -177,9 +177,6 @@ section h4 b {
     padding-bottom: 60px;
 }
 
-.resource h4 b {
-    background: #36323d;
-}
 
 .resource-row {
     margin: 0 auto;
@@ -219,8 +216,7 @@ section h4 b {
     font-weight: 300;
     letter-spacing: .1rem;
     color: #c8a400;
-    margin: 15px 0 5px;
-    padding-left: .4rem;
+    margin: 0 0 .8rem;
 }
 
 .resource-item p {
