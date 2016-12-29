@@ -248,7 +248,7 @@ section h4 b {
 }
 
 footer {
-    background: #19232e;
+    background: #232b33;
     margin: 0;
 }
 
@@ -280,7 +280,7 @@ footer {
     float: left;
     line-height: 2.4rem;
     font-size: 1.4rem;
-    color: #444;
+    color: #999;
 }
 
 .efe-products dl:after {
