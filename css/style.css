@@ -247,14 +247,14 @@ section h4 b {
 }
 
 footer {
-    background: #b3a6a6;
+    background: #19232e;
     margin: 0;
 }
 
 .efe-products {
     margin: 0 auto;
     max-width: 900px;
-    color: #36323d;
+    color: #999;
     padding: 10px 0;
 }
 
@@ -291,15 +291,15 @@ footer {
 }
 
 .copyright {
-    background: #fff;
+    background: #001a23;
     text-align: center;
     line-height: 6rem;
     font-size: 1.4rem;
-    color: #8c656d;
+    color: #fff;
 }
 
 .copyright a {
-    color: #8c656d;
+    color: #fff;
 }
 
 .recommend {
