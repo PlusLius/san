@@ -17,7 +17,7 @@
 组件定义定义组件最基本的方法是，从 san.Component 继承。San 提供了 san.inherits 方法，用于继承。
 12345678910function MyApp(options) &amp;#123;    san.Comp">
 <meta property="og:image" content="http://ecomfe.github.io/../../img/life-cycle.png">
-<meta property="og:updated_time" content="2016-12-26T17:31:46.000Z">
+<meta property="og:updated_time" content="2017-02-06T14:18:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="组件">
 <meta name="twitter:description" content="组件是 San 的基本单位，是独立的数据、逻辑、视图的封装单元。从页面的角度看，组件是 HTML 元素的扩展。从功能模式的角度看，组件是一个 ViewModel。
@@ -105,8 +105,8 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> MyApp = san.defineComponent(&#123;</div><div class="line">    template: <span class="string">'&lt;ul&gt;&lt;li san-for="item in list"&gt;&#123;&#123;item&#125;&#125;&lt;/li&gt;&lt;/ul&gt;'</span>,</div><div class="line"></div><div class="line">    attached: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.data.set(<span class="string">'list'</span>, [<span class="string">'san'</span>, <span class="string">'er'</span>, <span class="string">'esui'</span>, <span class="string">'etpl'</span>, <span class="string">'esl'</span>]);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>San 的组件是 HTML 元素扩展的风格，所以其生命周期与 WebComponents 相符合。</p>
 <ul>
-<li><code>inited</code> - 组件实例初始化完成</li>
 <li><code>compiled</code> - 组件视图模板编译完成</li>
+<li><code>inited</code> - 组件实例初始化完成</li>
 <li><code>created</code> - 组件元素创建完成</li>
 <li><code>attached</code> - 组件已被附加到页面中</li>
 <li><code>detached</code> - 组件从页面中移除</li>
