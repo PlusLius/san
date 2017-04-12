@@ -20,7 +20,7 @@
 类型： Object
 用法：
 1234567891011121314var MyComponent = san.defineComponent(&amp;#123;&amp;#125;);var myComponent = new MyComponent(&amp;#123;    el: document.getElementById(&apos;my-la">
-<meta property="og:updated_time" content="2017-03-06T14:29:19.000Z">
+<meta property="og:updated_time" content="2017-04-12T09:50:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="API">
 <meta name="twitter:description" content="初始化参数data解释：
@@ -157,7 +157,7 @@
 <p><code>用法</code>：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">san.defineComponent(&#123;</div><div class="line">    template: <span class="string">'&lt;a&gt;&#123;&#123;name&#125;&#125;&lt;/a&gt;'</span>,</div><div class="line"></div><div class="line">    <span class="comment">// name 数据项由 firstName 和 lastName 计算得来</span></div><div class="line">    computed: &#123;</div><div class="line">        name: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.data.get(<span class="string">'firstName'</span>) + <span class="string">' '</span> + <span class="keyword">this</span>.data.get(<span class="string">'lastName'</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <h3 id="messages"><a href="#messages" class="headerlink" title="messages"></a>messages</h3><p><code>解释</code>：</p>
-<p>声明组件中的计算数据。详细描述请参考<a href="../../tutorial/component/#消息">消息</a>文档。</p>
+<p>声明处理子组件派发消息的方法。详细描述请参考<a href="../../tutorial/component/#消息">消息</a>文档。</p>
 <p><code>类型</code>： Object</p>
 <p><code>用法</code>：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Select = san.defineComponent(&#123;</div><div class="line">    template: <span class="string">'&lt;ul&gt;&lt;slot&gt;&lt;/slot&gt;&lt;/ul&gt;'</span>,</div><div class="line"></div><div class="line">    messages: &#123;</div><div class="line">        <span class="string">'UI:select-item-selected'</span>: <span class="function"><span class="keyword">function</span> (<span class="params">arg</span>) </span>&#123;</div><div class="line">            <span class="comment">// arg.target 可以拿到派发消息的组件</span></div><div class="line">            <span class="keyword">var</span> value = arg.value;</div><div class="line">            <span class="keyword">this</span>.data.set(<span class="string">'value'</span>, value);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
