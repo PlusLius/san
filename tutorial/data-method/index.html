@@ -7,21 +7,21 @@
   <title>数据操作 | San</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="San 在组件的 data 上提供了一些数据操作的方法。通过这些方法操作数据，相应的视图会被自动刷新。
-说明：为什么是通过 San 提供的方法操作数据，而不是直接操作数据？因为defineSetter并未被国内常用的浏览器广泛支持，所以我们选择了折中的方式。因此，只有通过 San 提供的方法修改数据，视图才会自动刷新。
-初始化通过定义 initData 方法，可以在定义组件时指定组件初始化时的数据">
+说明：为什么是通过 San 提供的方法操作数据，而不是直接操作数据？因为defineProperty并未被国内常用的浏览器广泛支持，并且我们也并不喜欢这种侵入式的风格，所以我们选择了折中的方式。因此，只有通过 San 提供的方法修改数据，视图才会自动刷新。
+初始化通过定义 initData 方法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据操作">
 <meta property="og:url" content="http://ecomfe.github.io/tutorial/data-method/index.html">
 <meta property="og:site_name" content="San">
 <meta property="og:description" content="San 在组件的 data 上提供了一些数据操作的方法。通过这些方法操作数据，相应的视图会被自动刷新。
-说明：为什么是通过 San 提供的方法操作数据，而不是直接操作数据？因为defineSetter并未被国内常用的浏览器广泛支持，所以我们选择了折中的方式。因此，只有通过 San 提供的方法修改数据，视图才会自动刷新。
-初始化通过定义 initData 方法，可以在定义组件时指定组件初始化时的数据">
-<meta property="og:updated_time" content="2016-09-12T13:40:49.000Z">
+说明：为什么是通过 San 提供的方法操作数据，而不是直接操作数据？因为defineProperty并未被国内常用的浏览器广泛支持，并且我们也并不喜欢这种侵入式的风格，所以我们选择了折中的方式。因此，只有通过 San 提供的方法修改数据，视图才会自动刷新。
+初始化通过定义 initData 方法">
+<meta property="og:updated_time" content="2017-04-24T03:43:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据操作">
 <meta name="twitter:description" content="San 在组件的 data 上提供了一些数据操作的方法。通过这些方法操作数据，相应的视图会被自动刷新。
-说明：为什么是通过 San 提供的方法操作数据，而不是直接操作数据？因为defineSetter并未被国内常用的浏览器广泛支持，所以我们选择了折中的方式。因此，只有通过 San 提供的方法修改数据，视图才会自动刷新。
-初始化通过定义 initData 方法，可以在定义组件时指定组件初始化时的数据">
+说明：为什么是通过 San 提供的方法操作数据，而不是直接操作数据？因为defineProperty并未被国内常用的浏览器广泛支持，并且我们也并不喜欢这种侵入式的风格，所以我们选择了折中的方式。因此，只有通过 San 提供的方法修改数据，视图才会自动刷新。
+初始化通过定义 initData 方法">
   
     <link rel="alternate" href="/atom.xml" title="San" type="application/atom+xml">
   
@@ -106,7 +106,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>San 在组件的 data 上提供了一些数据操作的方法。通过这些方法操作数据，相应的视图会被自动刷新。</p>
-<p><code>说明</code>：为什么是通过 San 提供的方法操作数据，而不是直接操作数据？因为defineSetter并未被国内常用的浏览器广泛支持，所以我们选择了折中的方式。因此，只有通过 San 提供的方法修改数据，视图才会自动刷新。</p>
+<p><code>说明</code>：为什么是通过 San 提供的方法操作数据，而不是直接操作数据？因为defineProperty并未被国内常用的浏览器广泛支持，并且我们也并不喜欢这种侵入式的风格，所以我们选择了折中的方式。因此，只有通过 San 提供的方法修改数据，视图才会自动刷新。</p>
 <h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>通过定义 initData 方法，可以在定义组件时指定组件初始化时的数据。initData 方法返回组件实例的初始化数据。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">san.defineComponent(&#123;</div><div class="line">    initData: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            width: <span class="number">200</span>,</div><div class="line">            top: <span class="number">100</span>,</div><div class="line">            left: <span class="number">-1000</span></div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><p>set 方法是最常用的操作数据的方法，作用相当于 JavaScript 中的赋值 (=)。</p>
@@ -126,6 +126,8 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">san.defineComponent(&#123;</div><div class="line">    rm: <span class="function"><span class="keyword">function</span> (<span class="params">user</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.data.remove(<span class="string">'users'</span>, user);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <h3 id="removeAt"><a href="#removeAt" class="headerlink" title="removeAt"></a>removeAt</h3><p>通过数据项的索引移除一条数据。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">san.defineComponent(&#123;</div><div class="line">    rmAt: <span class="function"><span class="keyword">function</span> (<span class="params">index</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.data.removeAt(<span class="string">'users'</span>, index);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="splice"><a href="#splice" class="headerlink" title="splice"></a>splice</h3><p>向数组中添加或删除项目。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">san.defineComponent(&#123;</div><div class="line">    rm: <span class="function"><span class="keyword">function</span> (<span class="params">index, deleteCount</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.data.splice(<span class="string">'users'</span>, [index, deleteCount]);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -134,7 +136,7 @@
 
 <aside class="toc-wrap">
   <a href="#" class="toc-top"><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i></a>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化"><span class="toc-text">初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#set"><span class="toc-text">set</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数组方法"><span class="toc-text">数组方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#push"><span class="toc-text">push</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pop"><span class="toc-text">pop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#unshift"><span class="toc-text">unshift</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shift"><span class="toc-text">shift</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#remove"><span class="toc-text">remove</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#removeAt"><span class="toc-text">removeAt</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化"><span class="toc-text">初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#set"><span class="toc-text">set</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数组方法"><span class="toc-text">数组方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#push"><span class="toc-text">push</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pop"><span class="toc-text">pop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#unshift"><span class="toc-text">unshift</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shift"><span class="toc-text">shift</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#remove"><span class="toc-text">remove</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#removeAt"><span class="toc-text">removeAt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#splice"><span class="toc-text">splice</span></a></li></ol></li></ol>
 </aside>
 
 </main>
