@@ -20,7 +20,7 @@ NPMNPM 是流行的包管理工具，通过它能够方便的管理依赖包，�
 CDN通过 unpkg，你可以无需下载，直接引用。
 1&amp;lt;script src=&quot;https://unpkg.com/san@latest&quot;&amp;gt;&amp;lt;/script&amp;gt;
 NPMNPM 是流行的包管理工具，通过它能够方便的管理依赖包，以及和社区的各种开发构建工具良好配合，">
-<meta property="og:updated_time" content="2016-12-26T17:31:46.000Z">
+<meta property="og:updated_time" content="2017-06-11T15:17:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装">
 <meta name="twitter:description" content="你可以通过任何喜欢或者习惯的方式安装和使用 San。
@@ -79,7 +79,7 @@ NPMNPM 是流行的包管理工具，通过它能够方便的管理依赖包，�
         <dd><a href="/san/tutorial/event/">事件处理</a></dd>
         <dd><a href="/san/tutorial/form/">表单</a></dd>
         <dd><a href="/san/tutorial/component/">组件</a></dd>
-        <dd><a href="/san/tutorial/from-element/">组件反解</a></dd>
+        <dd><a href="/san/tutorial/reverse/">组件反解</a></dd>
 
         <dt>了解更多</dt>
         <dd><a href="/san/doc/api/">API DOC</a></dd>
@@ -118,7 +118,7 @@ NPMNPM 是流行的包管理工具，通过它能够方便的管理依赖包，�
 <h3 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h3><p>NPM 是流行的包管理工具，通过它能够方便的管理依赖包，以及和社区的各种开发构建工具良好配合，构建你的应用程序。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 安装最新版本</div><div class="line">$ npm install san</div></pre></td></tr></table></figure>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="script"><a href="#script" class="headerlink" title="script"></a>script</h3><p>在页面上通过 script 标签引用需要的文件是常用的方式。可以引用下载下来的 San，也可以通过 CDN 引用。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 引用直接下载下来的San--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"san的目录/dist/san.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 引用通过NPM下载下来的San--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"node_modules/san/dist/san.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 引用直接下载下来的San --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"san的目录/dist/san.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 引用通过NPM下载下来的San --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"node_modules/san/dist/san.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>注意：在引用时，</p>
 <ul>
 <li>如果页面上没有 AMD 环境，将会在页面上注册全局变量 <code>san</code></li>

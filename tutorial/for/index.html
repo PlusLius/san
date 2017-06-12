@@ -6,25 +6,28 @@
   
   <title>循环 | San</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="通过循环渲染列表是常见的场景。通过在元素上作用 san-for 指令，我们可以渲染一个列表。
-语法san-for 指令的语法形式如下：
+  <meta name="description" content="通过循环渲染列表是常见的场景。通过在元素上作用 s-for 指令，我们可以渲染一个列表。
+语法s-for 指令的语法形式如下：
 1item-identifier[, index-identifier] in expression
-列表渲染下面的代码描述了在元素上作用 san-for 指令，渲染一个列表。在列表渲染的元素内部，可以正常访问到 owner 组件上的其他数据（下面例子中的dept">
+列表渲染下面的代码描述了在元素上作用 s-for 指令，渲染一个列表。在列表渲染的元素内部，可以正常访问到 owner 组件上的其他数据（下面例子中的dept）。
+123">
 <meta property="og:type" content="article">
 <meta property="og:title" content="循环">
 <meta property="og:url" content="http://ecomfe.github.io/tutorial/for/index.html">
 <meta property="og:site_name" content="San">
-<meta property="og:description" content="通过循环渲染列表是常见的场景。通过在元素上作用 san-for 指令，我们可以渲染一个列表。
-语法san-for 指令的语法形式如下：
+<meta property="og:description" content="通过循环渲染列表是常见的场景。通过在元素上作用 s-for 指令，我们可以渲染一个列表。
+语法s-for 指令的语法形式如下：
 1item-identifier[, index-identifier] in expression
-列表渲染下面的代码描述了在元素上作用 san-for 指令，渲染一个列表。在列表渲染的元素内部，可以正常访问到 owner 组件上的其他数据（下面例子中的dept">
-<meta property="og:updated_time" content="2016-09-12T13:40:49.000Z">
+列表渲染下面的代码描述了在元素上作用 s-for 指令，渲染一个列表。在列表渲染的元素内部，可以正常访问到 owner 组件上的其他数据（下面例子中的dept）。
+123">
+<meta property="og:updated_time" content="2017-06-11T15:15:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="循环">
-<meta name="twitter:description" content="通过循环渲染列表是常见的场景。通过在元素上作用 san-for 指令，我们可以渲染一个列表。
-语法san-for 指令的语法形式如下：
+<meta name="twitter:description" content="通过循环渲染列表是常见的场景。通过在元素上作用 s-for 指令，我们可以渲染一个列表。
+语法s-for 指令的语法形式如下：
 1item-identifier[, index-identifier] in expression
-列表渲染下面的代码描述了在元素上作用 san-for 指令，渲染一个列表。在列表渲染的元素内部，可以正常访问到 owner 组件上的其他数据（下面例子中的dept">
+列表渲染下面的代码描述了在元素上作用 s-for 指令，渲染一个列表。在列表渲染的元素内部，可以正常访问到 owner 组件上的其他数据（下面例子中的dept）。
+123">
   
     <link rel="alternate" href="/atom.xml" title="San" type="application/atom+xml">
   
@@ -76,7 +79,7 @@
         <dd><a href="/san/tutorial/event/">事件处理</a></dd>
         <dd><a href="/san/tutorial/form/">表单</a></dd>
         <dd><a href="/san/tutorial/component/">组件</a></dd>
-        <dd><a href="/san/tutorial/from-element/">组件反解</a></dd>
+        <dd><a href="/san/tutorial/reverse/">组件反解</a></dd>
 
         <dt>了解更多</dt>
         <dd><a href="/san/doc/api/">API DOC</a></dd>
@@ -108,14 +111,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>通过循环渲染列表是常见的场景。通过在元素上作用 <strong>san-for</strong> 指令，我们可以渲染一个列表。</p>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p><strong>san-for</strong> 指令的语法形式如下：</p>
+        <p>通过循环渲染列表是常见的场景。通过在元素上作用 <strong>s-for</strong> 指令，我们可以渲染一个列表。</p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p><strong>s-for</strong> 指令的语法形式如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">item-identifier[, index-identifier] in expression</div></pre></td></tr></table></figure>
-<h2 id="列表渲染"><a href="#列表渲染" class="headerlink" title="列表渲染"></a>列表渲染</h2><p>下面的代码描述了在元素上作用 <strong>san-for</strong> 指令，渲染一个列表。在列表渲染的元素内部，可以正常访问到 owner 组件上的其他数据（下面例子中的dept）。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Template --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>name - email<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">dd</span> <span class="attr">san-for</span>=<span class="string">"p in persons"</span> <span class="attr">title</span>=<span class="string">"&#123;&#123;p.name&#125;&#125;"</span>&gt;</span>&#123;&#123;p.name&#125;&#125;(&#123;&#123;dept&#125;&#125;) - &#123;&#123;p.email&#125;&#125;<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="列表渲染"><a href="#列表渲染" class="headerlink" title="列表渲染"></a>列表渲染</h2><p>下面的代码描述了在元素上作用 <strong>s-for</strong> 指令，渲染一个列表。在列表渲染的元素内部，可以正常访问到 owner 组件上的其他数据（下面例子中的dept）。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Template --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>name - email<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">dd</span> <span class="attr">s-for</span>=<span class="string">"p in persons"</span> <span class="attr">title</span>=<span class="string">"&#123;&#123;p.name&#125;&#125;"</span>&gt;</span>&#123;&#123;p.name&#125;&#125;(&#123;&#123;dept&#125;&#125;) - &#123;&#123;p.email&#125;&#125;<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Component</span></div><div class="line">san.defineComponent(&#123;</div><div class="line">    <span class="comment">// template</span></div><div class="line"></div><div class="line">    initData: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            dept: <span class="string">'ssg'</span>,</div><div class="line">            persons: [</div><div class="line">                &#123;name: <span class="string">'errorrik'</span>, email: <span class="string">'errorrik@gmail.com'</span>&#125;,</div><div class="line">                &#123;name: <span class="string">'otakustay'</span>, email: <span class="string">'otakustay@gmail.com'</span>&#125;</div><div class="line">            ]</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><p><strong>san-for</strong> 指令中可以指定索引变量名（下面例子中的index），从而在列表渲染过程获得列表元素的索引。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Template --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>name - email<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">dd</span> <span class="attr">san-for</span>=<span class="string">"p, index in persons"</span> <span class="attr">title</span>=<span class="string">"&#123;&#123;p.name&#125;&#125;"</span>&gt;</span>&#123;&#123;index + 1&#125;&#125;. &#123;&#123;p.name&#125;&#125;(&#123;&#123;dept&#125;&#125;) - &#123;&#123;p.email&#125;&#125;<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><p><strong>s-for</strong> 指令中可以指定索引变量名（下面例子中的index），从而在列表渲染过程获得列表元素的索引。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Template --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>name - email<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">dd</span> <span class="attr">s-for</span>=<span class="string">"p, index in persons"</span> <span class="attr">title</span>=<span class="string">"&#123;&#123;p.name&#125;&#125;"</span>&gt;</span>&#123;&#123;index + 1&#125;&#125;. &#123;&#123;p.name&#125;&#125;(&#123;&#123;dept&#125;&#125;) - &#123;&#123;p.email&#125;&#125;<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Component</span></div><div class="line">san.defineComponent(&#123;</div><div class="line">    <span class="comment">// template</span></div><div class="line"></div><div class="line">    initData: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            dept: <span class="string">'ssg'</span>,</div><div class="line">            persons: [</div><div class="line">                &#123;name: <span class="string">'errorrik'</span>, email: <span class="string">'errorrik@gmail.com'</span>&#125;,</div><div class="line">                &#123;name: <span class="string">'otakustay'</span>, email: <span class="string">'otakustay@gmail.com'</span>&#125;</div><div class="line">            ]</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <h2 id="列表数据操作"><a href="#列表数据操作" class="headerlink" title="列表数据操作"></a>列表数据操作</h2><p>列表数据的增加、删除等操作请使用组件 data 提供的数组方法。详细请参考<a href="../data-method/#数组方法">数组方法</a>文档。</p>
 
