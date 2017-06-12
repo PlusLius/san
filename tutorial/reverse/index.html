@@ -16,7 +16,7 @@
 <meta property="og:description" content="组件初始化时传入 el，其将作为组件根元素，并以此反解析出视图结构。
 该特性的意图是：有时我们为了首屏时间，期望初始的视图是直接的 HTML，不由组件渲染。但是我们希望组件为我们管理数据、逻辑与视图，后续的用户交互行为与视图变换通过组件管理。
 123var myComponent = new MyComponent(&amp;#123;    el: document.getElementById(&apos;wr">
-<meta property="og:updated_time" content="2017-06-12T02:45:50.000Z">
+<meta property="og:updated_time" content="2017-06-12T03:30:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="组件反解">
 <meta name="twitter:description" content="组件初始化时传入 el，其将作为组件根元素，并以此反解析出视图结构。
@@ -74,12 +74,14 @@
         <dd><a href="/san/tutorial/form/">表单</a></dd>
         <dd><a href="/san/tutorial/component/">组件</a></dd>
         <dd><a href="/san/tutorial/reverse/">组件反解</a></dd>
+        <dd><a href="/san/tutorial/ssr/">服务端渲染</a></dd>
 
         <dt>了解更多</dt>
-        <dd><a href="/san/doc/api/">API DOC</a></dd>
+        <dd><a href="/san/doc/api/">组件 API</a></dd>
         <dd><a href="https://github.com/ecomfe/san/blob/master/doc/anode.md" target="_blank">ANode DOC</a></dd>
         
         <dt>周边</dt>
+        <dd><a href="https://ecomfe.github.io/san-mui/" target="_blank">san-mui</a></dd>
         <dd><a href="https://github.com/ecomfe/san-router" target="_blank">san-router</a></dd>
         <dd><a href="https://github.com/ecomfe/san-store" target="_blank">san-store</a></dd>
         <dd><a href="https://github.com/ecomfe/san-update" target="_blank">san-update</a></dd>
@@ -116,6 +118,7 @@
 </ul>
 <p>但是，<strong>el</strong> 可能需要一些额外的标记，来帮助 San 认识数据与视图的结构（插值、绑定、循环、分支、组件等），以便于后续的行为管理与视图刷新。</p>
 <p>数据和视图是组件重要的组成部分，我们将从这两个方面说明组件反解的功能。</p>
+<p><code>提示</code>：如果使用 NodeJS 做服务端，San 提供了 <a href="../ssr/">服务端渲染</a> 的支持，能够天然输出标记好可被组件反解的 HTML，你无需了解组件反解的标记形式。如果你服务端使用其他的语言（比如PHP），请继续往下阅读。</p>
 <h2 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h2><p>该章节介绍如何对视图的结构（插值、绑定、循环、分支、组件等）进行标记。</p>
 <h3 id="插值文本"><a href="#插值文本" class="headerlink" title="插值文本"></a>插值文本</h3><p>插值文本的标记方式是：在文本的前后各添加一个注释。</p>
 <ul>
@@ -199,8 +202,8 @@
             <p>这里展示了一些简单例子，以及在实际项目如何使用San。</p>
         </a>
         <a class="resource-item" href="/san/doc/api/">
-            <h5>API</h5>
-            <p>当你想不起来San提供的接口时，请查阅这里。</p>
+            <h5>组件 API</h5>
+            <p>当你想不起来组件的接口时，请查阅这里。</p>
         </a>
     </div>
 </section>
