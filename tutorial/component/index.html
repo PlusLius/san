@@ -17,7 +17,7 @@
 组件定义定义组件最基本的方法是，从 san.Component 继承。San 提供了 san.inherits 方法，用于继承。
 12345678910function MyApp(options) &amp;#123;    san.Comp">
 <meta property="og:image" content="http://ecomfe.github.io/../../img/life-cycle.png">
-<meta property="og:updated_time" content="2017-06-11T16:41:12.000Z">
+<meta property="og:updated_time" content="2017-07-13T09:35:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="组件">
 <meta name="twitter:description" content="组件是 San 的基本单位，是独立的数据、逻辑、视图的封装单元。从页面的角度看，组件是 HTML 元素的扩展。从功能模式的角度看，组件是一个 ViewModel。
@@ -207,6 +207,8 @@
 <h3 id="components"><a href="#components" class="headerlink" title="components"></a>components</h3><p>组件中通常通过声明自定义元素，使用其它组件。</p>
 <p>组件视图可以使用哪些子组件类型，必须通过定义组件的 <strong>components</strong> 成员指定。key 是自定义元素的标签名，value 是组件的类。</p>
 <p><code>注意</code>：考虑到组件的独立性，San 没有提供全局组件注册的方法，组件必须在自身的 <strong>components</strong> 中声明自己内部会用到哪些组件。</p>
+<p>有些组件可能在内容中会使用自己，比如树的节点。我们可以将 <strong>components</strong> 中这一项的值设置为字符串 <strong>self</strong>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Node = san.defineComponent(&#123;</div><div class="line">    <span class="comment">// template</span></div><div class="line"></div><div class="line">    components: &#123;</div><div class="line">        <span class="string">'ui-node'</span>: <span class="string">'self'</span></div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <h3 id="owner-与-parent"><a href="#owner-与-parent" class="headerlink" title="owner 与 parent"></a>owner 与 parent</h3><p><strong>owner</strong> 与 <strong>parent</strong> 的概念已经被 react 明确过了，但这里还是要专门明确下。</p>
 <p><strong>owner</strong> 指的是目标在声明时位于哪个组件的组件视图中，其生存时间、交互的通信等行为都由 <strong>owner</strong> 管理。<strong>owner</strong> 必须是一个组件。ui-calendar 的 <strong>owner</strong> 是 AddForm 组件。</p>
 <p><strong>parent</strong> 指的是目标在视图中对应的直接父级元素。ui-calendar 的 <strong>parent</strong> 是其上层的 div。<strong>parent</strong> 对组件管理并没有直接的意义。</p>
