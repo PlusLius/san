@@ -4,30 +4,24 @@
   <meta charset="utf-8">
   <link rel="shortcut icon" href="/san/img/favicon.ico" type="image/x-icon" />
   
-  <title>条件 | San</title>
+  <title>什么东西不要保存在 data 里？ | San</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="s-if通过 s-if 指令，我们可以为元素指定条件。当条件成立时元素可见，当条件不成立时元素不存在。
-提示：当不满足条件时，San 会将元素从当前页面中移除，而不是隐藏。
-1&amp;lt;span s-if=&quot;isOK&quot;&amp;gt;Hello San!&amp;lt;/span&amp;gt;
-s-if 指令的值可以是任何类型的表达式。
-1&amp;lt;span s-if=&quot;isReady &amp;amp;&amp;amp; isActiv">
+  <meta name="description" content="我们知道，data 里应该存与视图相关的数据状态。我们在下面列举了一些不当的使用场景，这些场景是我们不止发现过一次的。
+函数不要把函数作为数据存放。函数应该是独立的，或者作为组件方法存在。
+123456// badthis.data.set(&apos;camel2kebab&apos;, function (source) &amp;#123;    return source.replace(/[A-Z]/g, func">
 <meta property="og:type" content="article">
-<meta property="og:title" content="条件">
-<meta property="og:url" content="http://ecomfe.github.io/tutorial/if/index.html">
+<meta property="og:title" content="什么东西不要保存在 data 里？">
+<meta property="og:url" content="http://ecomfe.github.io/practice/data-invalid/index.html">
 <meta property="og:site_name" content="San">
-<meta property="og:description" content="s-if通过 s-if 指令，我们可以为元素指定条件。当条件成立时元素可见，当条件不成立时元素不存在。
-提示：当不满足条件时，San 会将元素从当前页面中移除，而不是隐藏。
-1&amp;lt;span s-if=&quot;isOK&quot;&amp;gt;Hello San!&amp;lt;/span&amp;gt;
-s-if 指令的值可以是任何类型的表达式。
-1&amp;lt;span s-if=&quot;isReady &amp;amp;&amp;amp; isActiv">
-<meta property="og:updated_time" content="2017-06-11T15:17:01.000Z">
+<meta property="og:description" content="我们知道，data 里应该存与视图相关的数据状态。我们在下面列举了一些不当的使用场景，这些场景是我们不止发现过一次的。
+函数不要把函数作为数据存放。函数应该是独立的，或者作为组件方法存在。
+123456// badthis.data.set(&apos;camel2kebab&apos;, function (source) &amp;#123;    return source.replace(/[A-Z]/g, func">
+<meta property="og:updated_time" content="2017-07-30T02:14:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="条件">
-<meta name="twitter:description" content="s-if通过 s-if 指令，我们可以为元素指定条件。当条件成立时元素可见，当条件不成立时元素不存在。
-提示：当不满足条件时，San 会将元素从当前页面中移除，而不是隐藏。
-1&amp;lt;span s-if=&quot;isOK&quot;&amp;gt;Hello San!&amp;lt;/span&amp;gt;
-s-if 指令的值可以是任何类型的表达式。
-1&amp;lt;span s-if=&quot;isReady &amp;amp;&amp;amp; isActiv">
+<meta name="twitter:title" content="什么东西不要保存在 data 里？">
+<meta name="twitter:description" content="我们知道，data 里应该存与视图相关的数据状态。我们在下面列举了一些不当的使用场景，这些场景是我们不止发现过一次的。
+函数不要把函数作为数据存放。函数应该是独立的，或者作为组件方法存在。
+123456// badthis.data.set(&apos;camel2kebab&apos;, function (source) &amp;#123;    return source.replace(/[A-Z]/g, func">
   
     <link rel="alternate" href="/atom.xml" title="San" type="application/atom+xml">
   
@@ -103,29 +97,27 @@ s-if 指令的值可以是任何类型的表达式。
     </dl>
 </aside>
 
-<article id="post-tutorial/if" class="article article-type-post" itemscope itemprop="blogPost">
+<article id="post-practice/data-invalid" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
         
   
     <h1 class="article-title" itemprop="name">
-      条件
+      什么东西不要保存在 data 里？
     </h1>
   
 
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="s-if"><a href="#s-if" class="headerlink" title="s-if"></a>s-if</h2><p>通过 <strong>s-if</strong> 指令，我们可以为元素指定条件。当条件成立时元素可见，当条件不成立时元素不存在。</p>
-<p><code>提示</code>：当不满足条件时，San 会将元素从当前页面中移除，而不是隐藏。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">s-if</span>=<span class="string">"isOK"</span>&gt;</span>Hello San!<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><strong>s-if</strong> 指令的值可以是任何类型的<a href="../data-binding/#表达式">表达式</a>。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">s-if</span>=<span class="string">"isReady &amp;&amp; isActive"</span>&gt;</span>Hello San!<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><code>提示</code>：San 的条件判断不是严格的 === false。所以，一切 JavaScript 的假值都会认为条件不成立：0、空字符串、null、undefined、NaN等。</p>
-<h2 id="s-else"><a href="#s-else" class="headerlink" title="s-else"></a>s-else</h2><p><strong>s-else</strong> 指令可以给 <strong>s-if</strong> 增加一个不满足条件的分支块。<strong>s-else</strong> 指令没有值。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">s-if</span>=<span class="string">"isOnline"</span>&gt;</span>Hello!<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">s-else</span>&gt;</span>Offline<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><code>提示</code>：<strong>s-else</strong> 指令元素必须跟在 <strong>s-if</strong> 指令元素后，否则将抛出 <strong>else not match if</strong> 的异常。</p>
+        <p>我们知道，data 里应该存与视图相关的数据状态。我们在下面列举了一些不当的使用场景，这些场景是我们不止发现过一次的。</p>
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><p>不要把函数作为数据存放。函数应该是独立的，或者作为组件方法存在。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="keyword">this</span>.data.set(<span class="string">'camel2kebab'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">source</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> source.replace(<span class="regexp">/[A-Z]/g</span>, <span class="function"><span class="keyword">function</span> (<span class="params">match</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">'-'</span> + match.toLowerCase();</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h4 id="DOM-对象"><a href="#DOM-对象" class="headerlink" title="DOM 对象"></a>DOM 对象</h4><p>这个应该不用解释吧。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="keyword">this</span>.data.set(<span class="string">'sideEl'</span>, <span class="built_in">document</span>.querySelector(<span class="string">'sidebar'</span>));</div></pre></td></tr></table></figure>
+<h4 id="组件等复杂对象"><a href="#组件等复杂对象" class="headerlink" title="组件等复杂对象"></a>组件等复杂对象</h4><p>不要使用数据来做动态子组件的管理。动态子组件对象可以直接存在组件的成员中。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="keyword">var</span> layer = <span class="keyword">new</span> Layer();</div><div class="line">layer.attach(<span class="built_in">document</span>.body);</div><div class="line"><span class="keyword">this</span>.data.set(<span class="string">'layer'</span>, layer);</div><div class="line"></div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="keyword">var</span> layer = <span class="keyword">new</span> Layer();</div><div class="line">layer.attach(<span class="built_in">document</span>.body);</div><div class="line"><span class="keyword">this</span>.layer = layer;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -134,7 +126,7 @@ s-if 指令的值可以是任何类型的表达式。
 
 <aside class="toc-wrap">
   <a href="#" class="toc-top"><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i></a>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#s-if"><span class="toc-text">s-if</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#s-else"><span class="toc-text">s-else</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#函数"><span class="toc-text">函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DOM-对象"><span class="toc-text">DOM 对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#组件等复杂对象"><span class="toc-text">组件等复杂对象</span></a></li></ol>
 </aside>
 
 </main>
